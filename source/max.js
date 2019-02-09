@@ -27,8 +27,7 @@ const euclid = (...args) => {
 
     let result = gcd(args[0], args[1]);
 
-    [...args].splice(1, 2);
-    [...args].forEach(element => {
+    args.splice(2).forEach(element => {
         result = gcd(result, element);
     });
 
